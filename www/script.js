@@ -28,7 +28,7 @@ btn.addEventListener("click", () => {
         ${data[0].meanings[0].definitions[0].example || ""}
         </p>
         `;
-      sound.setAttribute("src", `https:${data[0].phonetics[0].audio}`);
+      sound.setAttribute("src", `${data[0].phonetics[0].audio}`);
     })
     .catch(() => {
       result.innerHTML = `<h3 class="error">Couldn't Find the word</h3>`;
@@ -37,3 +37,5 @@ btn.addEventListener("click", () => {
 function playSound() {
   sound.play();
 }
+
+// https://api.dictionaryapi.dev/media/pronunciations/en/ample-au.mp3
